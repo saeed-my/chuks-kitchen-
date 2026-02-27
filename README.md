@@ -50,3 +50,20 @@ src/
     ├── Checkout.jsx / .css     # Delivery Details, Payment, Loading, Confirmation
     ├── Auth.jsx / .css         # Login + Sign Up (split layout)
     └── Orders.jsx / .css       # My Orders history
+
+
+How to Run + deployment link
+
+# 1. Create a new Vite + React project
+npm create vite@latest chuks-kitchen -- --template react
+cd chuks-kitchen
+
+# 2. Delete the default src/ folder
+# 3. Copy all files from this src/ folder into the project's src/
+
+# 4. Install & run
+npm install
+npm run dev
+
+Runs at http://localhost:5173
+Deployed at https://chuks-kitchen-gray.vercel.app/
