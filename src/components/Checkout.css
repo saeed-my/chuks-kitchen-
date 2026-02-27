@@ -1,0 +1,108 @@
+.checkout-page { padding: 40px 0 72px; }
+
+/* Stepper */
+.checkout-steps {
+  display: flex; align-items: center; justify-content: center;
+  gap: 0; margin-bottom: 36px; flex-wrap: wrap;
+}
+.ck-step { display: flex; align-items: center; gap: 8px; }
+.ck-step-dot {
+  width: 32px; height: 32px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700;
+  background: var(--border); color: var(--text-muted); flex-shrink: 0;
+}
+.ck-step.done .ck-step-dot { background: var(--orange); color: #fff; }
+.ck-step.active .ck-step-dot { background: var(--orange); color: #fff; box-shadow: 0 0 0 4px rgba(232,114,28,0.2); }
+.ck-step span { font-size: 13px; font-weight: 500; color: var(--text-muted); white-space: nowrap; }
+.ck-step.done span, .ck-step.active span { color: var(--text); font-weight: 600; }
+.ck-step-line { width: 48px; height: 2px; background: var(--border); margin: 0 8px; }
+.ck-step.done .ck-step-line { background: var(--orange); }
+
+/* Card */
+.checkout-card {
+  background: #fff; border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 36px;
+  max-width: 540px; margin: 0 auto;
+  display: flex; flex-direction: column; gap: 20px;
+}
+.checkout-card h2 { font-size: 24px; font-family: 'Playfair Display', serif; }
+
+.delivery-address-box {
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 14px 16px;
+}
+.delivery-address-box p { font-size: 14px; color: var(--text-muted); margin-bottom: 2px; }
+.delivery-address-box strong { color: var(--text); }
+.change-link { background: none; border: none; color: var(--orange); font-size: 13px; font-weight: 600; margin-top: 8px; }
+
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+
+.checkout-summary-mini {
+  display: flex; justify-content: space-between; align-items: center;
+  background: var(--orange-light); border-radius: var(--radius-sm);
+  padding: 12px 16px; font-size: 15px;
+}
+.checkout-summary-mini strong { font-size: 18px; color: var(--orange); }
+
+.checkout-next { padding: 14px; font-size: 15px; }
+
+/* Payment */
+.pay-methods { display: flex; gap: 10px; }
+.pay-method {
+  flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 12px; border: 2px solid var(--border); border-radius: var(--radius-sm);
+  font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.18s;
+}
+.pay-method input { display: none; }
+.pay-method.active { border-color: var(--orange); background: var(--orange-light); color: var(--orange); }
+
+.card-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.secure-note { text-align: center; font-size: 12px; color: var(--text-light); }
+
+/* Loading */
+.loading-card {
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; padding: 100px 0; text-align: center;
+  max-width: 400px; margin: 0 auto;
+}
+.loader-ring {
+  width: 64px; height: 64px; border-radius: 50%;
+  border: 5px solid var(--border);
+  border-top-color: var(--orange);
+  animation: spin 0.9s linear infinite;
+  margin-bottom: 28px;
+}
+.loading-card h3 { font-size: 22px; margin-bottom: 8px; }
+.loading-card p { color: var(--text-muted); }
+
+/* Confirmed */
+.confirmed-card {
+  display: flex; flex-direction: column; align-items: center;
+  text-align: center; padding: 80px 0; max-width: 480px; margin: 0 auto;
+  gap: 16px;
+}
+.confirmed-icon {
+  width: 80px; height: 80px; border-radius: 50%;
+  background: var(--green); color: #fff;
+  font-size: 36px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 8px;
+}
+.confirmed-card h2 { font-size: 28px; }
+.confirmed-card p { color: var(--text-muted); max-width: 340px; }
+.order-id-box {
+  background: var(--orange); color: #fff;
+  padding: 12px 32px; border-radius: 6px; font-size: 15px; font-weight: 700;
+}
+.confirmed-btns { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+
+@media (max-width: 600px) {
+  .checkout-card { padding: 24px 18px; }
+  .ck-step span { display: none; }
+  .ck-step-line { width: 24px; }
+}
+@media (max-width: 480px) {
+  .checkout-card { padding: 20px 16px; }
+  .card-row { grid-template-columns: 1fr; }
+}

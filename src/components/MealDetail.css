@@ -1,0 +1,33 @@
+.meal-detail-page { padding: 32px 0 64px; }
+.back-btn { background: none; border: none; color: var(--orange); font-size: 14px; font-weight: 600; margin-bottom: 24px; display: flex; align-items: center; gap: 6px; }
+.back-btn:hover { text-decoration: underline; }
+
+.meal-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+
+.detail-img-wrap { position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 4/3; }
+.detail-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+.detail-badge { position: absolute; top: 16px; left: 16px; background: var(--orange); color: #fff; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 5px; }
+
+.detail-info { display: flex; flex-direction: column; gap: 16px; }
+.detail-category { font-size: 12px; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
+.detail-name { font-size: clamp(24px, 3vw, 36px); color: var(--text); font-family: 'Playfair Display', serif; line-height: 1.2; }
+.detail-rating { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; }
+.detail-reviews { color: var(--text-light); font-weight: 400; }
+.detail-desc { font-size: 15px; color: var(--text-muted); line-height: 1.7; }
+.detail-chips { display: flex; gap: 10px; flex-wrap: wrap; }
+.detail-chips span { background: var(--bg); border: 1px solid var(--border); border-radius: 20px; padding: 6px 14px; font-size: 13px; font-weight: 500; }
+.detail-price-row { display: flex; align-items: baseline; gap: 12px; }
+.detail-price { font-size: 32px; font-weight: 700; color: var(--text); font-family: 'Playfair Display', serif; }
+.special-note { resize: none; font-size: 13px; }
+.detail-actions { display: flex; flex-direction: column; gap: 10px; }
+.detail-add { padding: 14px; font-size: 15px; }
+.detail-back { padding: 12px; font-size: 14px; }
+
+@media (max-width: 768px) {
+  .meal-detail-grid { grid-template-columns: 1fr; gap: 24px; }
+}
+@media (max-width: 600px) {
+  .detail-img-col { height: 220px; }
+  .detail-panel { padding: 20px 16px; gap: 16px; }
+  .detail-name { font-size: 20px; }
+}

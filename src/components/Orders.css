@@ -1,0 +1,23 @@
+.orders-page { padding: 40px 0 64px; }
+.orders-title { font-size: 28px; margin-bottom: 6px; }
+.orders-sub { color: var(--text-muted); margin-bottom: 32px; }
+.orders-empty { text-align: center; padding: 80px 0; font-size: 56px; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.orders-list { display: flex; flex-direction: column; gap: 16px; }
+
+.order-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 22px 24px; }
+.order-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px; }
+.order-id { font-size: 15px; font-weight: 700; display: block; margin-bottom: 3px; }
+.order-date { font-size: 13px; color: var(--text-light); }
+
+.order-status { font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; }
+.order-status.green { background: #E6F4EA; color: var(--green); }
+.order-status.orange { background: var(--orange-light); color: var(--orange); }
+.order-status.red { background: #FEE; color: var(--red); }
+
+.order-items { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
+.order-item-pill { background: var(--bg); border: 1px solid var(--border); border-radius: 20px; font-size: 13px; padding: 5px 13px; color: var(--text-muted); }
+
+.order-card-footer { display: flex; justify-content: space-between; align-items: center; }
+.order-total { font-size: 18px; font-weight: 700; font-family: 'Playfair Display', serif; }
+.order-actions { display: flex; gap: 10px; }
+.order-action-btn { padding: 8px 18px; font-size: 13px; }

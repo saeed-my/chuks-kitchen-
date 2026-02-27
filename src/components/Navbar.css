@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
+.navbar {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; z-index: 100;
+}
+.navbar-inner {
+  display: flex; align-items: center;
+  height: 64px; gap: 32px;
+}
+.navbar-logo { cursor: pointer; }
+.logo-text {
+  font-family: 'Island Moments', cursive;
+  font-size: 40px; font-weight: 700;
+  color: var(--orange);
+  letter-spacing: -0.3px;
+}
+.navbar-links {
+  display: flex; list-style: none; flex: 1; justify-content: space-evenly;
+}
+.nav-link {
+  background: none; border: none;
+  padding: 7px 14px; border-radius: 6px;
+  font-size: 14px; font-weight: 500;
+  color: var(--text-muted); transition: all 0.18s;
+}
+.nav-link:hover { color: var(--text); background: var(--bg); }
+.nav-link.active { color: var(--orange); font-weight: 600; }
+
+.navbar-actions { display: flex; align-items: center; gap: 10px; }
+
+.cart-nav-btn {
+  display: flex; align-items: center; gap: 6px;
+  background: var(--orange-light); border: none;
+  padding: 7px 14px; border-radius: 6px;
+  font-size: 14px; font-weight: 600; color: var(--orange);
+  position: relative;
+}
+.cart-count {
+  background: var(--orange); color: #fff;
+  width: 18px; height: 18px; border-radius: 50%;
+  font-size: 11px; display: flex; align-items: center; justify-content: center;
+}
+
+.mobile-menu-btn {
+  display: none; background: none; border: none;
+  font-size: 22px; color: var(--text); cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar-links { display: none; }
+  .mobile-menu-btn { display: flex; }
+  .navbar-inner { justify-content: space-between; }
+}
+.mobile-menu {
+  display: flex; flex-direction: column;
+  background: #fff; border-top: 1px solid var(--border);
+  padding: 12px 16px 20px;
+}
+.mobile-menu button {
+  background: none; border: none;
+  padding: 14px 8px; font-size: 15px; font-weight: 500;
+  color: var(--text); text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+.mobile-menu button:last-child { border-bottom: none; }
+.mobile-menu button:hover { color: var(--orange); }
+.mobile-login-btn {
+  margin-top: 12px;
+  background: var(--orange) !important; color: #fff !important;
+  border-radius: 6px !important; text-align: center !important;
+  font-weight: 700 !important;
+}
