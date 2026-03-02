@@ -3,7 +3,7 @@
 **Client:** Mr. Chukwudi Okorie (Mr. Chuks)  
 **Built by:** TrueMinds Innovations Ltd  
 **Type:** Food Ordering & Customer Management UI  
-
+ deployed at: https://chuks-kitchen-gray.vercel.app/
 ---
 
 ## What Was Built
